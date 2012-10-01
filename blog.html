@@ -1,0 +1,11 @@
+---
+title: Blog
+layout: index
+---
+
+{% for post in site.posts %}
+  {% if post.blog contains 'main' %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  {% endif %}
+{% endfor %}
+

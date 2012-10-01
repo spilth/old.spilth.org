@@ -1,0 +1,13 @@
+---
+title: Memories
+layout: index
+---
+
+This is a collection of memories from when I was younger. Some of them may be funny. Most of them involve me getting hurt in some way.
+
+{% for post in site.posts %}
+  {% if post.blog contains 'memories' %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  {% endif %}
+{% endfor %}
+

@@ -1,0 +1,6 @@
+auto: true
+markdown: rdiscount
+permalink: pretty
+exclude: Rakefile, Gemfile, Gemfile.lock, _bootstrap
+pygments: true
+

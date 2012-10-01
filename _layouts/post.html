@@ -1,0 +1,22 @@
+---
+layout: default
+blog-active: active
+---
+
+<div class="content">
+  <div class="page-header">
+		<h1><a href="/blog/">Blog</a>: {{ page.title }}</h1>
+  </div>
+
+  <div class="row">
+   	<div class="span16">
+	  	{{ content }}
+		</div>
+	</div>
+
+  <div class="row">
+  	<div class="span16">
+			{% include disqus.html %}        
+		</div>
+  </div>
+</div>
