@@ -47,7 +47,7 @@ layout: note
 
 ## What does it look like?
 
-<div class="thumbnail"><a href="https://skitch.com/spilth/ekuqw/screen-shot-2012-08-03-at-11.19.25-am"><img style="max-width:638px" src="https://img.skitch.com/20120803-xm3269hqrtjb1hxur8r5nndeea.medium.jpg" alt="Screen shot 2012-08-03 at 11.19.25 AM" /></a></div>
+{% image tmux-dev.png %}
 
 ## Downsides/Problems?
 

@@ -1,27 +1,27 @@
 ---
 title: Game Development
-layout: index
+layout: hobby
 ---
 
+## History
 
-<div class="row">
-  <div class="span8">
-    <h2>History</h2>
+I've enjoyed all kinds of games since I was a kid. I'm particular fond of video games, role playing games and board & card games. 
 
-    <p>This is where I'll talk about my interest in game development.</p>
+Ever since the track editor in Excitebike I've loved when video game developers provide tools to create your own maps and mods.
 
-    <h2>Projects</h2>
+## Projects
 
-  </div>
-  <div class="span4">
-    <div class="well">
-    <h2>Game Development Profiles</h2>
-    <ul>
-      <li><a href="http://www.ludumdare.com/compo/author/spilth/">Ludum Dare</a></li>
-      <li><a href="http://gamedev.stackexchange.com/users/2201/spilth">Game Development StackExchange</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-    </ul>
-  </div>
-</div>
+- [The Arcanaeum](/projects/the-arcanaeum/)
+- [JavaScript Set Game](/projects/javascript-set/)
+- [Marble Mania 2003](/projects/mm2k3/)
+- [Venus Needs Men](/projects/venus-needs-men/)
+
+## Profiles
+
+- [Ludum Dare](http://www.ludumdare.com/compo/author/spilth/)
+- [Game Development StackExchange](http://gamedev.stackexchange.com/users/2201/spilth)
+ 
+## Resources
+
+- [Unity 3D](http://unity3d.com/)
+

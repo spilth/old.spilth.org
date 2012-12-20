@@ -1,3 +1,8 @@
+---
+title: Jekyll
+layout: note
+---
+
 ## Resources
 
 * https://github.com/mojombo/jekyll

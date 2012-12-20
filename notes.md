@@ -1,6 +1,7 @@
 ---
 title: Notes
 layout: index
+notestab: active
 ---
 
 These are my personal notes on various subjects, generally software or software development related.
@@ -29,7 +30,8 @@ I make no guarantee as to the correctness of this information.
 * [Rails 3 Time Zones, Dates & Times](/notes/rails3-date-time)
 * [Rake](/notes/rake)
 * [RubyGems](/notes/rubygems)
-* [RVM](/notes/rvm)
+* [RVM](/notes/rvm/)
+* [tmux](/notes/tmux/)
 * [Vagrant](/notes/vagrant)
 * [Vagrant & Puppet](/notes/vagrant-puppet)
 * [vim](/notes/vim)
@@ -41,6 +43,7 @@ I make no guarantee as to the correctness of this information.
 ## Game Development
 
 * [Blender](/notes/blender)
+* [Unity 3D](/notes/unity3d)
 * [Unreal Development Kit](/notes/udk)
 
 ## Geographical Information Systems

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="content">
+  <h1><a href="/meetups/">Meetups</a>: {{ page.title }}</h1>
+  <h6>{{ page.date | date: "%B %d, %Y" }}</h6>
+  <h6><a href="{{ page.meetup_url }}">{{ page.meetup_url }}</a></h6>
+  <h6><a href="{{ page.slides_url }}">{{ page.slides_url }}</a></h6>
+
+  <div class="row">
+   	<div class="span12">
+	  	{{ content }}
+		</div>
+	</div>
+
+  <div class="row">
+  	<div class="span12">
+			{% include disqus.html %}        
+		</div>
+  </div>
+</div>

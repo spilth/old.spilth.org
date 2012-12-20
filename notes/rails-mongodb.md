@@ -1,3 +1,8 @@
+---
+title: MongoDB
+layout: default
+---
+
 ## Installation
 
 	$ brew install mongodb
@@ -56,37 +61,36 @@ Then edit `app/models/product.rb` and add:
 	  field :price, type: BigDecimal
 	end
 
-Product.where(:price.lte => 40).first
-Product.lte(price: 40)
+  Product.where(:price.lte => 40).first
+  Product.lte(price: 40)
 
-Mongoid::Criteria
+  Mongoid::Criteria
 
-Product.lte(price: 40).gt(...)
+  Product.lte(price: 40).gt(...)
 
-rails g model review content
+  rails g model review content
 
-class Product
-  ...
+  class Product
+    ...
 
-  embeds_many :reviews
-end
+    embeds_many :reviews
+  end
 
-class Review
-  include Mongoid::Document
-  field :content, type: String
+  class Review
+    include Mongoid::Document
+    field :content, type: String
 
-  embedded_in :product
-end
+    embedded_in :product
+  end
 
-p = Product.first
-p.reviews.create! content: "great game!"
+  p = Product.first
+  p.reviews.create! content: "great game!"
 
 Embedded association stores the document within another document
 
-Review.count returns 0
+  Review.count returns 0
 
 Embedding prevents having to do extra queries
-
 
 Mongoid::Timestamps = created_at / updated_at
 Mongoid::Paranoia

@@ -3,11 +3,30 @@ title: Marble Mania 2003
 layout: project
 ---
 
-## Overview
+## Download
+
+[Marble Mania 2003 UT2k3 Mod](http://www.moddb.com/mods/marble-madness-2003/downloads/marble-mania-2003-v07-umod) - Requires Unreal Tournmanent 2003
+
+## Summary
+
+Marble Madness as a game modification for the Unreal Tournament 2003 engine.
+
+## Tools
+
+- Adobe Photoshop
+- Ableton Live
+- UnrealEd
+- PHP
+
+## Screenshots
+
+{% image mm2k301.jpeg %}
+{% image mm2k302.jpeg %}
+{% image mm2k303.jpeg %}
+
+## Details
 
 Marble Mania 2003 is a mod for Unreal Tournament 2003 inspired by the great classic arcade game Marble Madness. MM2k3 brings several new features to the table such as the freedom to rotate around the marble, zooming in/out, realistic physics handled by Karma integration with the Unreal engine, marble skins (with optional environment mapping), and the ability to make your own maps using UnrealEd!
-
-<a href="http://www.flickr.com/photos/spilth/35932719/" title="It's Electric! by spilth, on Flickr"><img src="http://farm1.staticflickr.com/31/35932719_6293c3306d_m.jpg" width="240" height="180" alt="It's Electric!"></a> <a href="http://www.flickr.com/photos/spilth/35931510/" title="Multiplayer Arena by spilth, on Flickr"><img src="http://farm1.staticflickr.com/30/35931510_1a0362a53b_m.jpg" width="240" height="180" alt="Multiplayer Arena"></a> <a href="http://www.flickr.com/photos/spilth/35928155/" title="Tornados by spilth, on Flickr"><img src="http://farm1.staticflickr.com/24/35928155_2cb1d6afa1_m.jpg" width="240" height="180" alt="Tornados"></a>
 
 The mod was meant to be strongly influenced by Marble Madness, keeping the the look and atmosphere of the original game by using the same types of textures and level design.
 
@@ -41,19 +60,19 @@ For this project I did the following:
 
 A couple of years ago I managed to get the mod working with a copy of Unreal Tournament 2003 I had, so I put together a little video showing off some of the game a little.
 
-<iframe src="http://player.vimeo.com/video/14423454?byline=0&amp;portrait=0&amp;color=00aa00" width="940" height="529" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% vimeo 14423454 %}
 
 ## Music 
 
 Here are the musical tracks I created for the mod:
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F4674018&amp;auto_play=false&amp;show_artwork=false&amp;color=009900"></iframe>
+{% soundcloud 4674018 %}
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F5206066&amp;auto_play=false&amp;show_artwork=false&amp;color=009900"></iframe>
+{% soundcloud 5206066 %}
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F5206033&amp;auto_play=false&amp;show_artwork=false&amp;color=009900"></iframe>
+{% soundcloud 5206033 %}
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F30361199&amp;auto_play=false&amp;show_artwork=false&amp;color=009900"></iframe>
+{% soundcloud 30361199 %}
 
 ## History
 

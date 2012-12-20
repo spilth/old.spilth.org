@@ -3,6 +3,15 @@ title: Arduino
 layout: note
 ---
 
+## Questions
+
+- What happens if I write to an output that has nothing plugged into it?
+
+
+## Adding Libraries
+
+- Put libraries in `~/Documents/Arduino/libraries/`
+
 ## Resources
 
 - http://arduino.cc/

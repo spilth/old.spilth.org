@@ -217,7 +217,8 @@ Undoing a numbered paste and then using the `.` command will paste from the next
 ## Windows
 
 * `ctrl-w n` = create new window above current window
-* `ctrl-w s` = split window in two
+* `ctrl-w s` = split window horizontally in two
+* `ctrl-w v` = split window vertically in two
 * `ctrl-w w` = switch between open windows
 * `ctrl-w j` = switch to window below current window
 * `ctrl-w k` = switch to window above current window
