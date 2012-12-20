@@ -1,6 +1,22 @@
+name: spilth.org
+description: Personal site of Brian Kelly
+url: http://spilth.org/
 auto: true
 markdown: rdiscount
 permalink: pretty
-exclude: Rakefile, Gemfile, Gemfile.lock, _bootstrap
+exclude: Rakefile, Gemfile, Gemfile.lock, _jekyll_s3.yml
 pygments: true
+mini_magick:
+    thumbnail:
+        source: images/original
+        destination: images/thumbnail
+        resize: "140x140"
+    small:
+        source: images/original
+        destination: images/small
+        resize: "320x240"
+    medium:
+        source: images/original
+        destination: images/medium
+        resize: "640x480"
 
