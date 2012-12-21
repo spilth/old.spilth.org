@@ -30,7 +30,7 @@ module Liquid
     end
 
     def render(context)
-      %Q{<p><a href="/images/original/#{@image}"><img class="img-polaroid" src="/images/small/#{@image}" width="320" height="240" /></a></p>}
+      %Q{<a href="/images/original/#{@image}"><img class="thumbnail" src="/images/small/#{@image}" width="320" height="240" /></a>}
     end
   end
   
@@ -44,9 +44,23 @@ module Liquid
       %Q{<p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F#{@id}&amp;show_artwork=false"></iframe></p>}
     end
   end
+
+  class SidebarBlock < Liquid::Block
+
+    alias :super_render :render
+
+    def initialize(tag_name, identifier, tokens)
+       super
+    end
+
+    def render(context)
+      context.environments.first["page"]["sidebar"] = super_render(context)
+      ''
+    end
+  end
 end
 
-
+Liquid::Template.register_tag('sidebar', Liquid::SidebarBlock)
 Liquid::Template.register_tag('image', Liquid::ImageTag)
 Liquid::Template.register_tag('vimeo', Liquid::VimeoTag)
 Liquid::Template.register_tag('youtube', Liquid::YouTubeTag)

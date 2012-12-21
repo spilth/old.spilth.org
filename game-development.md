@@ -9,6 +9,8 @@ I've enjoyed all kinds of games since I was a kid. I'm particular fond of video 
 
 Ever since the track editor in Excitebike I've loved when video game developers provide tools to create your own maps and mods.
 
+{% sidebar %}
+
 ## Projects
 
 - [The Arcanaeum](/projects/the-arcanaeum/)
@@ -25,3 +27,4 @@ Ever since the track editor in Excitebike I've loved when video game developers 
 
 - [Unity 3D](http://unity3d.com/)
 
+{% endsidebar %}

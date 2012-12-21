@@ -27,6 +27,8 @@ the laundry room
 
 saikuna grey / beautiful lie
 
+{% sidebar %}
+
 ## Projects
 
 - [The Laundry Room](/projects/the-laundry-room/)
@@ -39,4 +41,5 @@ saikuna grey / beautiful lie
 - [SoundCloud](http://soundcloud.com/polymonic)
 - [Vimeo](https://vimeo.com/album/2059904)
 
+{% endsidebar %}
 

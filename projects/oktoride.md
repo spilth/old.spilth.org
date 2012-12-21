@@ -20,6 +20,9 @@ oktoride helps you determine if your favorite mountain biking trails are in good
 
 ## Screenshots
 
-{% image oktoride01.png %}
-{% image oktoride02.png %}
-{% image oktoride03.png %}
+<ul class="thumbnails">
+<li>{% image oktoride01.png %}</li>
+<li>{% image oktoride02.png %}</li>
+<li>{% image oktoride03.png %}</li>
+</ul>
+

@@ -20,9 +20,12 @@ Marble Madness as a game modification for the Unreal Tournament 2003 engine.
 
 ## Screenshots
 
-{% image mm2k301.jpeg %}
-{% image mm2k302.jpeg %}
-{% image mm2k303.jpeg %}
+<ul class="thumbnails">
+<li>{% image mm2k301.jpeg %}</li>
+<li>{% image mm2k302.jpeg %}</li>
+<li>{% image mm2k303.jpeg %}</li>
+</ul>
+
 
 ## Details
 

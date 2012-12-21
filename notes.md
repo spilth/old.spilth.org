@@ -10,31 +10,52 @@ I make no guarantee as to the correctness of this information.
 
 ## Software Development
 
-* [My Development Environment](/notes/development_environment)
-* [Apache Tomcat](/notes/apache-tomcat)
+### Development Environment
+
 * [Bash](/notes/bash)
-* [Bundler](/notes/bundler)
-* [Git](/notes/git)
-* [Git & Subversion](/notes/git-svn)
-* [Java Logging](/notes/java-logging)
-* [JSON](/notes/json)
-* [JUnit](/notes/junit)
 * [Mac Boot Keys](/notes/mac-boot-keys)
+* [My Development Environment](/notes/development_environment)
+* [tmux](/notes/tmux/)
+* [vim](/notes/vim)
+
+### Databases
+
+* [PostgreSQL](/notes/postgresql)
+* [PostGIS](/notes/postgis)
+
+### Java
+
+* [Java Logging](/notes/java-logging)
+* [JUnit](/notes/junit)
 * [Maven](/notes/maven)
 * [Maven - Code Coverage](/notes/maven-code-coverage)
 * [Maven - Static Analysis](/notes/maven-static-analysis)
-* [PostgrelSQL](/notes/postgresql)
-* [Puppet](/notes/puppet)
-* [R](/notes/r)
+
+### Ruby and Rails
+
+* [Bundler](/notes/bundler)
 * [Rails 3 Custom Scaffolding](/notes/rails3-custom-scaffolding)
 * [Rails 3 Time Zones, Dates & Times](/notes/rails3-date-time)
 * [Rake](/notes/rake)
 * [RubyGems](/notes/rubygems)
 * [RVM](/notes/rvm/)
-* [tmux](/notes/tmux/)
+
+### Version Control
+
+* [Git](/notes/git)
+* [Git & Subversion](/notes/git-svn)
+
+### Virtual Machines and Automation
+
+* [Puppet](/notes/puppet)
 * [Vagrant](/notes/vagrant)
 * [Vagrant & Puppet](/notes/vagrant-puppet)
-* [vim](/notes/vim)
+
+### Miscellaneous
+
+* [Apache Tomcat](/notes/apache-tomcat)
+* [JSON](/notes/json)
+* [R](/notes/r)
 
 ## Electronics
 

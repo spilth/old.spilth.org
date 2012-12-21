@@ -18,8 +18,10 @@ The books of Skyrim presented in a clean, simple, readable format for easy readi
 
 ## Screenshots
 
-{% image arcanaeum01.png %}
-{% image arcanaeum02.png %}
+<ul class="thumbnails">
+<li>{% image arcanaeum01.png %}</li>
+<li>{% image arcanaeum02.png %}</li>
+</ul>
 
 ## History
 

@@ -13,6 +13,8 @@ I finished my mapping projects using Illustrator but started to teach myself GIS
 
 After moving to Brooklyn in 2012 I started the [New York City GIS & Cartography Meetup Group](http://www.meetup.com/nycgis/) but ended up stepping down from my role for personal reasons. I'd like to return when I have more energy to dedicate to it.  GIS is still a new hobby to me but this merging of design, databases and mountain biking is quite exciting!
 
+{% sidebar %}
+
 ## Projects
 
 - [Graham Hills Park Tail Map](/projects/graham-hills-park/)
@@ -23,4 +25,6 @@ After moving to Brooklyn in 2012 I started the [New York City GIS & Cartography 
 
 - [Garmin Connect](http://connect.garmin.com/profile/spilth)
 - [GIS Stackexchange](http://gis.stackexchange.com/users/584/brian-kelly)
+
+{% endsidebar %}
 

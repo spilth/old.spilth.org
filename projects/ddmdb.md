@@ -1,5 +1,5 @@
 ---
-title: D & D Miniatures Database
+title: D&D Miniatures Database
 layout: project
 ---
 
@@ -18,7 +18,8 @@ An unofficial D&D Miniatures Database. The goal of this site is store all RPG st
 
 ## Screenshots
 
-{% image ddmdb01.png %}
-{% image ddmdb02.png %}
-{% image ddmdb03.png %}
-
+<ul class="thumbnails">
+<li>{% image ddmdb01.png %}</li>
+<li>{% image ddmdb02.png %}</li>
+<li>{% image ddmdb03.png %}</li>
+</ul>

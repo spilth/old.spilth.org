@@ -17,9 +17,9 @@ Hiking and mountain biking trail maps created for 3 Yorktown Trails parks for th
 
 ## Images
 
-{% image granite-knolls-park.png %}
-
-{% image woodlands-legacy-fields-park.png %}
-
-{% image sylvan-glen-nature-preserve.png %}
+<ul class="thumbnails">
+<li>{% image granite-knolls-park.png %}</li>
+<li>{% image woodlands-legacy-fields-park.png %}</li>
+<li>{% image sylvan-glen-nature-preserve.png %}</li>
+</ul>
 
