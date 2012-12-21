@@ -3,13 +3,11 @@ title: okToRide
 layout: project
 ---
 
+{% sidebar %}
+
 ## Web Site
 
 [okToRide.spilth.org](http://oktoride.spilth.org/)
-
-## Summary
-
-oktoride helps you determine if your favorite mountain biking trails are in good riding condition via reports from other riders and the weather forecast. Help other riders by submitting your own reports and help the trails by staying off them when they're in bad shape.
 
 ## Tools
 
@@ -17,6 +15,12 @@ oktoride helps you determine if your favorite mountain biking trails are in good
 - [MySQL]()
 - [Heroku]()
 - [Twitter Bootstrap]()
+
+{% endsidebar %}
+
+## Summary
+
+oktoride helps you determine if your favorite mountain biking trails are in good riding condition via reports from other riders and the weather forecast. Help other riders by submitting your own reports and help the trails by staying off them when they're in bad shape.
 
 ## Screenshots
 

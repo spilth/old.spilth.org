@@ -3,13 +3,22 @@ title: Marble Mania 2003
 layout: project
 ---
 
+{% sidebar %}
 ## Download
 
 [Marble Mania 2003 UT2k3 Mod](http://www.moddb.com/mods/marble-madness-2003/downloads/marble-mania-2003-v07-umod) - Requires Unreal Tournmanent 2003
 
-## Summary
+## Music 
 
-Marble Madness as a game modification for the Unreal Tournament 2003 engine.
+Here are the musical tracks I created for the mod:
+
+{% soundcloud 4674018 %}
+
+{% soundcloud 5206066 %}
+
+{% soundcloud 5206033 %}
+
+{% soundcloud 30361199 %}
 
 ## Tools
 
@@ -18,14 +27,24 @@ Marble Madness as a game modification for the Unreal Tournament 2003 engine.
 - UnrealEd
 - PHP
 
+{% endsidebar %}
+
+## Summary
+
+Marble Madness as a game modification for the Unreal Tournament 2003 engine.
+
 ## Screenshots
 
 <ul class="thumbnails">
 <li>{% image mm2k301.jpeg %}</li>
 <li>{% image mm2k302.jpeg %}</li>
-<li>{% image mm2k303.jpeg %}</li>
 </ul>
 
+## Video
+
+A couple of years ago I managed to get the mod working with a copy of Unreal Tournament 2003 I had, so I put together a little video showing off some of the game a little.
+
+{% vimeo 14423454 %}
 
 ## Details
 
@@ -59,23 +78,6 @@ For this project I did the following:
 - web site using PHP
 - mapping documentation for map makers
 
-## Video
-
-A couple of years ago I managed to get the mod working with a copy of Unreal Tournament 2003 I had, so I put together a little video showing off some of the game a little.
-
-{% vimeo 14423454 %}
-
-## Music 
-
-Here are the musical tracks I created for the mod:
-
-{% soundcloud 4674018 %}
-
-{% soundcloud 5206066 %}
-
-{% soundcloud 5206033 %}
-
-{% soundcloud 30361199 %}
 
 ## History
 

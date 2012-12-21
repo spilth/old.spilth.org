@@ -3,18 +3,9 @@ title: The Arcanaeum
 layout: project
 ---
 
-## Web Site
-
-[arcanaeum.spilth.org](http://arcanaeum.spilth.org/)
-
 ## Summary
 
 The books of Skyrim presented in a clean, simple, readable format for easy reading on mobile devices when away from the game itself.
-
-## Tools
-
-- [jekyll](https://github.com/mojombo/jekyll)
-- [Ruby](http://www.ruby-lang.org/)
 
 ## Screenshots
 
@@ -29,8 +20,20 @@ Like many gamers, I was sucked into the world of [Skyrim](http://www.elderscroll
 
 Probably the hardest part of the project was consistently spelling Arcanaeum correctly!
 
+{% sidebar %}
+
+## Web Site
+
+[arcanaeum.spilth.org](http://arcanaeum.spilth.org/)
+
+## Tools
+
+- [jekyll](https://github.com/mojombo/jekyll)
+- [Ruby](http://www.ruby-lang.org/)
+
 ## Resources
 
 * [Source Code](https://github.com/spilth/arcanaeum)
 
+{% endsidebar %}
 

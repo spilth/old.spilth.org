@@ -7,9 +7,14 @@ projectstab: active
 	<h1><a href="/projects/">Projects</a> : {{ page.title }}</h1>
 
   <div class="row">
-   	<div class="span12">
+   	<div class="span8">
 	  	{{ content }}
 		</div>
+    <div class="span4">
+      {% if page.sidebar %}
+        {{ page.sidebar | markdownify }}
+      {% endif %}
+    </div>
 	</div>
 
   <div class="row">
