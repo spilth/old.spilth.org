@@ -10,7 +10,7 @@ Over time I've started a lot of personal projects. Some of them I've even finish
 
 All the books of Skyrim in a clean, clear, tablet and mobile friendly display
 
-<img width="780" height="140" src="/images/banner-the-arcanaeum.png" class="thumbnail" />
+<img width="780" height="140" src="/images/banner-the-arcanaeum.jpg" class="thumbnail" />
 
 ## [D&D Miniatures Database](/projects/ddmdb/) - Web Site
 
@@ -30,6 +30,12 @@ The game Set in your browser
 
 <img width="780" height="140" src="/images/banner-javascript-set.png" class="thumbnail" />
 
+## [The Laundry Room](/projects/the-laundry-room/) - Music
+
+Rock band I was in during my college days. And a bit after.
+
+<img width="780" height="140" src="/images/banner-laundry-room.jpg" class="thumbnail" />
+
 ## [Marble Mania 2003](/projects/marble-mania-2003/) - Video Game
 
 An Unreal Tournament 2003 mod recreating the joy of Marble Madness in true 3D
@@ -40,19 +46,19 @@ An Unreal Tournament 2003 mod recreating the joy of Marble Madness in true 3D
 
 The music of Metroid as possibly performed by the 1970's version of Genesis
 
-<img width="780" height="140" src="/images/banner-mellotroid.png" class="thumbnail" />
+<img width="780" height="140" src="/images/banner-mellotroid.jpg" class="thumbnail" />
 
 ## [okToRide.com](/projects/oktoride/) - Web Site
 
 Trail condition reporting for mountain biking parks
 
-<img width="780" height="140" src="/images/banner-oktoride.png" class="thumbnail" />
+<img width="780" height="140" src="/images/banner-oktoride.jpg" class="thumbnail" />
 
 ## [Venus Needs Men](/projects/venus-needs-men/) - Game Board
 
 Board designed for a friend's self-published board game
 
-<img width="780" height="140" src="/images/banner-venus-needs-men.png" class="thumbnail" />
+<img width="780" height="140" src="/images/banner-venus-needs-men.jpg" class="thumbnail" />
 
 ## [Yorktown Trails](/projects/yorktown-trails/) - Maps
 
