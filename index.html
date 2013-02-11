@@ -15,19 +15,27 @@ layout: default
 
     <h2><a href="/blog/">My Blog</a></h2>
 
-    <p>I've been blogging since the year 2000 on a variety of platforms. I'm moving posts to <a href="/blog/">my blog here</a>. There's still a good number of posts in <a href="http://spilth.wordpress.com/">my blog archive</a> over on WordPress as well.</p>
+    <p>I've been blogging since the 2000, on a variety of platforms over the years. Currently I'm moving my posts to <a href="/blog/">my blog right here</a>, though there's still a good number of posts in <a href="http://spilth.wordpress.com/">my blog archive</a> over on WordPress still.</p>
+
+    <h2><a href="/hobbies/">My Hobbies</a></h2>
+
+    <p>I like to do a few different things in my spare time. My <a href="/hobbies/">hobbies</a> mostly revolve around computers, music, games and mountain bikes.</p>
     
     <h2><a href="/memories/">My Memories</a></h2>
 
-    <p>I've recently started to write up small stories from my <a href="/memories/">childhood memories</a>. They're good for laugh if you like reading about me getting hurt in various ways.</p>
+    <p>I've recently started to write up small stories from my <a href="/memories/">childhood memories</a>. They're good for a laugh if you like reading about me getting hurt and embarrassed in various ways.</p>
 
     <h2><a href="/notes/">My Notes</a></h2>
 
-    <p>One of the best ways I learn is by taking notes on something. I put <a href="/notes/">my notes</a> online so I can find them easily and so that others may learn from them.</p>
+    <p>One of the best ways I learn something is by taking notes on it. I put <a href="/notes/">my notes</a> online so I can refer to them easily and so that others may learn from them as well.</p>
     
     <h2><a href="/projects/">My Projects</a></h2>
 
-    <p>I like working on <a href="/projects/">personal projects</a> in my spare time. Web sites, maps, songs, games - those kind of things.</p>
+    <p>Sometimes my hobbies give birth to <a href="/projects/">personal projects</a>. Web sites, maps, songs, games - those kind of things.</p>
+    
+    <h2><a href="/colophon/">Colophon</a></h2>
+
+    <p>I love when books, movies, albums and web sites have a section telling you about what they used to create it, so I thought others might be interested in <a href="/colophon/">what I use to make this site</a>.
 
     <h2>Other Stuff</h2>
 
@@ -40,11 +48,19 @@ layout: default
     <h3><a href="http://blog.spilth.org/">Tumblr Blog</a></h3>
     
     <p>I'm sharing some lighter/fun stuff on <a href="http://blog.spilth.org/">my Tumblr blog</a>.</p>
-
   </div>
   <div class="span4">
     <div class="well">
     <img src="/images/me.png" width="150" height="145" class="img-rounded">
+
+    <h2>Newest Posts</h2>
+    
+    <ul>
+      {% for post in site.posts, limit: 2 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+
     <h2>Profiles</h2>
     <p>Where to find me around the interweb...</p>
     <ul>
@@ -54,7 +70,7 @@ layout: default
       <li><a href="https://github.com/spilth">GitHub</a></li>
       <li><a href="https://plus.google.com/112383017680227997640/posts">Google Plus</a></li>
       <li><a href="http://www.last.fm/user/spilth">last.fm</a></li>
-      <li><a href="http://soundcloud.com/polymonic">SoundCloud</a></li>
+      <li><a href="http://soundcloud.com/spilth">SoundCloud</a></li>
       <li><a href="https://twitter.com/#!/spilth">Twitter</a></li>
       <li><a href="https://vimeo.com/spilth">Vimeo</a></li>
     </ul>

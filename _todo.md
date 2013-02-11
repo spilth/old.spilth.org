@@ -1,9 +1,9 @@
 * convert memories to blog posts
 * move notes over
-- create project pages
-- get better project banner images
-- move over some blog posts
-- look into merging comments over
+* create project pages
+* get better project banner images
+* move over some blog posts
+O look into merging comments over
 
 spilth.org = 
 
@@ -13,12 +13,12 @@ development.spilth.org - stays on tumblr
 gis.spilth.org - turn into pages on spilth.org?
 ideas.spilth.org - stays on tumblr
 isometric.spilth.org - stays on tumblr, or would pinterest be better?
-memories.spilth.org - move to spilth.org/memories as blog
-notes.spilth.org - move to spilth.org/notes as static pages
-portfolio.spilth.org - move to spilth.org/projects as static pages
-projects.spilth.org - move to spilth.org/projects as static pages
+* memories.spilth.org - move to spilth.org/memories as blog
+* notes.spilth.org - move to spilth.org/notes as static pages
+* portfolio.spilth.org - move to spilth.org/projects as static pages
+* projects.spilth.org - move to spilth.org/projects as static pages
 set.spilth.org - leave on S3 for now
-archive.spilth.org - migrate from wordpress to spilth.org/blog?
+O archive.spilth.org - migrate from wordpress to spilth.org/blog?
 art.spilth.org - leave on deviantart.com
 
 blog
@@ -31,9 +31,6 @@ notes
  
 project
   static pages
-
-
-
 
 blog posts
 articles
@@ -53,7 +50,6 @@ hobbies
 	music
 	mountain-biking
 	game-development
-	
 
 ## Development Profiles
 
@@ -120,3 +116,4 @@ Scavenger Hunt
 Alien Boardgame Prototype
 Venus Needs Men
 game dev videos on vimeo
+

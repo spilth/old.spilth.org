@@ -3,7 +3,7 @@ title: Feature Toggles
 layout: meetup
 category: meetups
 meetup_url: http://www.meetup.com/ContinuousDeliveryNYC/events/909826120/
-
+published: false
 ---
 
 Presenter: [James Socol](http://jamessocol.com)

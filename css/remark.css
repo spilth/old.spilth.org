@@ -1,0 +1,18 @@
+#slideshow {
+  background: #f6f6f6;
+}
+
+pre {
+  border: 1px solid #ccc;
+  padding: 1em;
+  background-color: #222;
+  color: #ddd;
+}
+
+pre.output {
+  color: #0f0;
+}
+
+.warning {
+  color: #c00;
+}

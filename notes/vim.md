@@ -3,6 +3,8 @@ title: vim
 layout: note
 ---
 
+> Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
+
 My vim dot files are available in [my dotfiles project on GitHub](https://github.com/spilth/dotfiles).
 
 ## Basic Usage
@@ -250,6 +252,7 @@ Undoing a numbered paste and then using the `.` command will paste from the next
 
 ## Resources
 
+* [vim online](http://www.vim.org/)
 * [vim Quick Reference Card](http://tnerual.eriogerg.free.fr/vimqrc.html)
 * [Vim Commands Cheat Sheet](http://fprintf.net/vimCheatSheet.html)
 * [Janus: Carlhuda's vim Distribution](https://github.com/carlhuda/janus)

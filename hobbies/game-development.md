@@ -9,6 +9,8 @@ I've enjoyed all kinds of games since I was a kid. I'm particular fond of video 
 
 Ever since the track editor in Excitebike I've loved when video game developers provide tools to create your own maps and mods.
 
+This is probably my least mature hobby but it's still something I enjoy playing with.
+
 {% sidebar %}
 
 ## Projects

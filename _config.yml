@@ -1,8 +1,11 @@
 name: spilth.org
 description: Personal site of Brian Kelly
 url: http://spilth.org/
+server_port: 4200
 auto: true
-markdown: rdiscount
+markdown: kramdown
+kramdown:
+    toc_levels: 1..2
 permalink: pretty
 exclude: Rakefile, Gemfile, Gemfile.lock, _jekyll_s3.yml
 pygments: true

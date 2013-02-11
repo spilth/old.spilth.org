@@ -1,0 +1,853 @@
+---
+title: Ruby Crash Course
+layout: remark
+---
+
+class: middle,center
+
+# Ruby Crash Course
+
+---
+
+# Disclaimer
+
+## This is a whirlwind tour
+
+- It shows you the basics of Ruby
+- It is not a complete overview of the language but a quick exposure to how to do common things.
+- It assumes you are familiar with basic programming concepts:
+  - variables
+  - conditionals
+  - loops
+  - methods
+- It assumes you are familiar with the basics of object oriented programming:
+  - classes
+  - objects
+  - inheritance
+- It assumes you'll use the resources provided at the end to further your learning & practice.
+
+---
+
+class: center, middle
+
+# Installing Ruby
+
+---
+
+# BitNami Ruby Stack
+
+I'll be walking you through setting up the [BitNami Ruby Stack](http://bitnami.org/) which works on Mac, Linux and Windows.
+
+---
+
+# Other Installers
+
+You have other options available to you.
+
+## Mac
+
+If you're on a Mac you should already have a version of Ruby installed (1.8.). This should suffice for the majority of lessons in this course.
+
+## Linux
+
+If you're running Linux you will likely have an installation of Ruby already. If not, you can just your system's package manager to install Ruby.
+
+## Windows
+
+Windows does not come with Ruby. Your best best is to use the BitNami Ruby Stack mentioned previously.
+
+---
+
+# Ruby Version Manager (RVM)
+
+- https://rvm.io/
+- Available for Mac and Linux.
+- Let's you install and switch between multiple version of Ruby.
+- Requires XCode/gcc for compiling Ruby.
+- This is what BitNami installs.
+
+---
+
+# rbenv
+
+- https://github.com/sstephenson/rbenv/
+- I have not used this yet.
+
+---
+
+class: center,middle
+
+# BitNami Ruby Stack
+
+---
+
+# What is BitNami Ruby Stack?
+
+> BitNami Ruby Stack greatly simplifies the development and deployment of Ruby on Rails applications. It includes ready-to-run versions of Apache, MySQL, Ruby and Rails and required dependencies. It can be deployed all-in-one free native installers, virtual machines and Cloud Images. BitNami Ruby Stack is distributed for free under the Apache 2.0 license.
+
+---
+
+# Installing the BitNami Ruby Stack
+
+- Download the Ruby Stack *Installer* from http://bitnami.org/stack/ruby
+- Run the installer
+- At a minimum check off `Ruby on Rails` and `RVM` to install
+- Select a destination folder for installation
+  - Mac: If you don't have Admin rights on your machine, make this the `Applications` folder in your home directory
+- Enter a password for the database root user
+- Leave the Apache Web Server port at `8080` (unless you are running another service on that port  - it will let you know if something is listening on that port)
+- Leave the SLL port as `8443`
+- Leave the domain as `127.0.0.1`
+- Leave the MySQL port as `3306` unless you another instance running there
+- Visit http://localhost:8080/ and you should see a Welcome page
+
+---
+
+# Using the Bitnami Ruby Stack
+
+- Open a Terminal/Command-line window
+- Change to the directory where you installed BitNami
+- You will be prompted by RVM. Press `y` to accept.
+
+Here is what it looks like on  Mac:
+
+    $ cd ~/Applications/rubystack-1.9.3-4/
+    ...
+    Do you wish to trust this .rvmrc file? (/Users/bkelly1271/Applications/rubystack-1.9.3-4/.rvmrc)
+    y[es], n[o], v[iew], c[ancel]> y
+    ~/Applications/rubystack-1.9.3-4 06:18 PM $
+
+---
+
+# Ruby Version
+
+To check the version of Ruby you are using pass the `-v` flag to the `ruby` command:
+
+{% eval bash %}
+ruby -v
+{% endeval %}
+
+---
+
+# Running Ruby
+
+There are two ways you can go about executing Ruby code:
+
+- Create a `.rb` script file and use the `ruby` command to execute it
+- Use the `irb` command to use Ruby interactively
+
+---
+
+# Create a Ruby Script
+
+Create a file named `hello.rb` with the following contents:
+
+    puts "Hello!"
+
+Then run the script using the `ruby` command:
+
+    $ ruby hello.rb
+    Hello!
+
+---
+
+# Interactive Ruby Shell (irb)
+
+The quickest way to play with Ruby is to use the Interactive Ruby Shell, also known as `irb`. Anything you type in irb will be interpreted as Ruby and generate output (or an error...):
+
+    $ irb
+    1.9.3p362 :001 > puts "Hello"
+    Hello
+     => nil 
+    1.9.3p362 :002 > a = 3
+     => 3 
+    1.9.3p362 :003 > a < 42
+     => true 
+    1.9.3p362 :004 > a.class
+     => Fixnum 
+    1.9.3p362 :005 > "Hello".class
+     => String 
+    1.9.3p362 :006 > "Hello".length
+     => 5 
+
+`irb` is a great way to explore Ruby and figure out how to do things in an interactive way.
+
+---
+
+class: middle,center
+
+# What is Ruby?
+
+---
+
+# Object Oriented
+
+- Everything is an Object.
+- Every object belongs to a Class.
+- Classes provide methods you can call on those objects.
+
+---
+
+# Interpreted
+
+- No compilation.
+- Ruby interpreter executes source code directly.
+
+---
+
+# Dynamic
+
+- Ruby programs can manipulate themselves during runtime.
+  - Create classes/methods during runtime.
+  - Alter classes/methods during runtime.
+
+---
+
+# Dynamically Typed
+
+- The type/class of a variable can change over time.
+- It can be a String at one point and a FixNum (integer) at another.
+
+---
+
+# Strongly Typed
+
+- It makes sure you can call a particular Method on a particular Class.
+- .warning[It can become more weakly typed as you dynamically change it though...]
+
+---
+
+class: middle,center
+
+# Ruby Basics
+
+---
+
+# Practice, Practice, Practice
+
+The following examples are all runnable via a Ruby script or via irb.
+
+- It is recommended you start `irb` and follow along, typing in the example code and hopefully seeing similar output.
+- It is also recommended that you open up http://www.ruby-doc.org/core-1.9.3/ so you can easily reference Class and Method documentation.
+
+---
+
+# Output
+
+To print something to the screen use the `puts` method:
+
+{% eval ruby %}
+puts 'Hello!'
+{% endeval %}
+
+---
+
+# Variables
+
+To define a variable use the `=` assignment operator:
+
+{% eval ruby %}
+answer = 42
+puts answer
+{% endeval %}
+
+---
+
+# Strings
+
+Here are a few ways to create strings:
+
+{% eval ruby %}
+puts 'This is a string.'
+puts "This is also a string."
+puts %q[I can put ' and " in this string]
+{% endeval %}
+
+
+---
+
+# String Methods
+
+A taste of some string methods and Ruby syntax:
+
+{% eval ruby %}
+puts "OMG!".downcase
+puts "dude, where's my car?".capitalize
+puts "forty two".length
+puts "hello".index('o')
+puts "ruby".reverse
+{% endeval %}
+
+---
+
+# String Interpolation
+
+To have variables interpolated inside a string use double-quotes and put the variable inside a `#{}`.
+
+`%q` is the equivalent of a single quotes and `%Q` the equivalent of double quotes.
+
+{% eval ruby %}
+answer = 42
+puts 'The answer is: #{answer}.'
+puts "The answer is: #{answer}."
+puts %q{The answer is: #{answer}.}
+puts %Q{The answer is: #{answer}.}
+{% endeval %}
+
+---
+
+# ! Methods
+
+Sometimes methods will have two versions: a version with `!` at the end and a version without one.
+
+- The non-`!` version will return a new object containing the result of the method.
+- The `!` version will change the object itself.
+
+{% eval ruby %}
+message = "Don't Panic!"
+puts message.downcase
+puts message
+puts message.downcase!
+puts message
+{% endeval %}
+
+---
+
+# Comparison Operators
+
+Ruby contains many operators for testing the value of a variable:
+
+{% eval ruby %}
+answer = 42
+puts answer == 42
+puts answer != 42
+puts answer > 2
+puts answer < 36
+{% endeval %}
+
+---
+
+# If / Else 
+
+If/Else statements in Ruby are straightforward. You can also put `if`s at the end of a statement.
+
+{% eval ruby %}
+answer = 6 * 7
+if answer == 42
+  puts "You know the answer!"
+elsif answer == 54
+  puts "So wrong!"
+else
+  puts "Go away!"
+end
+puts "Don't Panic!" if answer == 42
+{% endeval %}
+
+---
+
+# Unless
+
+Ruby also has an `unless` keyword. You can also put at the end of a statement.
+
+{% eval ruby %}
+age = 42
+unless age < 40
+  puts "You're old!"
+end
+puts "Really, you're old!" unless age < 40
+{% endeval %}
+
+---
+
+# Ternary Operator
+
+A compact if/else using the `?` operator:
+
+{% eval ruby %}
+answer = 42
+puts answer == 43 ? "Yes!" : "No."
+{% endeval %}
+
+---
+
+# While Loop
+
+You can execute while a current condition is true:
+
+{% eval ruby %}
+count = 1
+while count < 4 do
+  puts count
+  count += 1
+end
+{% endeval %}
+
+---
+
+# Loop Until
+
+You can also loop until a condition is true:
+
+{% eval ruby %}
+count = 1
+until count > 4 do
+  puts count
+  count += 1
+end
+{% endeval %}
+
+---
+
+# Methods
+
+To define a method use the `def` keyword and then call the method using the name you gave it:
+
+{% eval ruby %}
+def hello
+  puts "Hello!"
+end
+
+hello
+{% endeval %}
+
+---
+
+# Method Return Value
+
+- A method returns the value of the last statement it executes.
+- You can also use `return` to return a specific value and end execution of the method.
+
+{% eval ruby %}
+def foo
+  value = 13
+  42
+end
+
+def bar
+  return "what?"
+  "why?"
+end
+puts foo
+puts bar
+{% endeval %}
+
+---
+
+# Methods with Arguments
+
+If you want to be able to pass arguments to your method, provide a comma-separated list of them within parentheses after the method name:
+
+{% eval ruby %}
+def greet(greeting, name)
+  puts "#{greeting}, #{name}!"
+end
+
+greet("Good day", "Brian")
+{% endeval %}
+
+---
+
+# Method Call Parentheses
+
+- When calling a method, the parentheses are option.
+- .warning[They are also optional when defining a method but that is considered bad form.]
+- .warning[When nesting method calls you will need to provide parentheses.]
+
+{% eval ruby %}
+def greet(greeting, name)
+  puts "#{greeting}, #{name}!"
+end
+
+greet "Good day", "Brian"
+{% endeval %}
+
+---
+
+# Debug Output
+
+You can use the `p` method to inspect an object. This can be useful for looking at things like Arrays and Hashes which we talk about next.
+
+---
+
+# Arrays
+
+> Arrays are ordered, integer-indexed collections of any object. Array indexing starts at 0, as in C or Java. 
+
+There are a couple of ways to create an array:
+
+{% eval ruby %}
+names = ['Arthur Dent', 'Ford Prefect', 'Trillian', 'Zaphod Beeblebrox']
+languages = %w{Ruby Java Lisp}
+junk = 'foo,bar,baz'.split(',')
+p names
+p languages
+p junk
+{% endeval %}
+
+---
+
+# Array Methods
+
+{% eval ruby %}
+names = ["Arthur Dent", "Ford Prefect", "Trillian", "Zaphod Beeblebrox"]
+puts names.length
+puts names[0]
+names.push "Marvin"
+puts names.length
+p names
+p names[0..1]
+p names[-3..-1]
+{% endeval %}
+
+---
+
+# Hashes
+
+> A Hash is a collection of key-value pairs. It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index. 
+
+It uses `=>` to assign values to keys, affectionately known as a Hashrocket.
+
+{% eval ruby %}
+ages = {"Arthur Dent" => 42, "Ford Prefect" => 500}
+puts ages["Arthur Dent"]
+ages["Marvin"] = "Ageless"
+puts ages.keys
+{% endeval %}
+
+---
+
+# Symbols
+ 
+- Symbols are a way to represent names and strings.
+- Every time you use a String literal like `"foo"` you are creating a new object and using more memory, even if it contains the same exact text.
+- Every time you use a Symbol literal like `:foo` you are using the same exact object.
+- Strings are mutable (can be changed)
+- Symbols immutable (can not be changed)
+
+{% eval ruby %}
+puts "foo".object_id
+puts "foo".object_id
+puts :foo.object_id
+puts :foo.object_id
+{% endeval %}
+
+---
+
+# Huh?
+
+Symbols will become clearer as you use them.
+
+## Where are they used?
+
+- Hash keys
+- Method calls
+- Returned values
+
+---
+
+# Hashes with Symbol Keys
+
+When you use Symbols for your keys you can shorten the syntax in Ruby 1.9+:
+
+{% eval ruby %}
+languages = {
+  :ruby => "Awesome",
+  :java => "Not bad",
+  :lisp => "Oh god..."
+}
+languages = {ruby: "Awesome", java: "Not bad", lisp: "Oh god..."}
+p languages
+puts languages[:ruby]
+{% endeval %}
+
+---
+
+# Blocks
+
+- Blocks allow you to pass code to a method for it to execute.
+- They are often used to iterate through collections.
+
+{% eval ruby %}
+3.times { puts "There's no place like home..." }
+{% endeval %}
+
+---
+
+# Blocks with { ... }
+
+For single lines of code, use brackets to wrap your block.
+
+{% eval ruby %}
+languages = %w(Ruby Java Python)
+languages.each { |language| puts "I like programming in #{language}" }
+{% endeval %}
+
+---
+
+# Blocks with do ... end
+
+For larger blocks use `do` and `end` to wrap your block.
+
+{% eval ruby %}
+languages = %w(Ruby Java Python)
+languages.each do |language|
+  if language == "Ruby"
+    puts "I love #{language}!"
+  else
+    puts "I'm not so crazy about #{language}..."
+  end
+end
+{% endeval %}
+---
+
+# Array.map
+
+> Invokes block once for each element of self. Creates a new array containing the values returned by the block.
+
+{% eval ruby %}
+languages = %w(Ruby PHP Python)
+interpreters = languages.map { |language| language.downcase }
+p interpreters
+{% endeval %}
+
+---
+
+# Hash.each
+
+> Calls block once for each key in hsh, passing the key-value pair as parameters.
+
+{% eval ruby %}
+reviews = {ruby: "awesome", java: "not bad", lisp: "oh god..."}
+reviews.each { |language, rating| puts "#{language} is #{rating}!" }
+{% endeval %}
+
+---
+
+class: middle,center
+
+# Classes
+
+---
+
+# Defining Classes
+
+- To define a class use the `class` keyword.
+- To create a new instance of a class, use the `new` method.
+
+{% eval ruby %}
+class Person
+
+end
+
+brian = Person.new
+{% endeval %}
+
+---
+
+# Instance Methods
+
+To define an instance method for a class just `def` a method inside the class definition.
+
+{% eval ruby %}
+class Person
+  def hello
+    puts "Hello there!"
+  end
+end
+
+brian = Person.new
+brian.hello
+{% endeval %}
+
+---
+
+# Class Initializers
+
+When you create a new instance of an object it calls the `initialize` method if it exists. This is where you can put code to set up your object.
+
+{% eval ruby %}
+class Person
+  def initialize
+    puts "Person initialized!"
+  end
+end
+
+brian = Person.new
+{% endeval %}
+
+---
+
+# Class Initializers with Arguments
+
+{% eval ruby %}
+class Person
+  def initialize(name)
+    puts "Initializing '#{name}'"
+  end
+end
+
+brian = Person.new("Brian")
+{% endeval %}
+    
+---
+
+# Instance Variables
+
+To create or use an instance variable, prefix it with `@`.
+
+{% eval ruby %}
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def greet
+    puts "Hi, my name is #{@name}."
+  end
+end
+
+brian = Person.new("Brian")
+brian.greet
+{% endeval %}
+
+---
+
+# Instance Variable Accessors
+
+Often you want to provide methods that let you read and/or alter instance variables in an object. These are sometimes know as getters/setters or readers/writers.
+
+In Ruby you can:
+
+- create these yourself, usually if you have special logic
+- have Ruby create them for you, when they don't require any logic
+
+---
+
+# Manual Readers/Writers
+
+{% eval ruby %}
+class Person
+  def name
+    @name
+  end
+
+  def name=(new_name)
+    @name = new_name
+  end
+
+  def greet
+    puts "Hello, I'm #{@name}!"
+  end
+end
+
+brian = Person.new
+brian.name = "Brian"
+brian.greet
+{% endeval %}
+
+---
+
+# Using attr Methods
+
+Ruby provides a set of `attr*` methods that provide basic instance variable readers and writers for you:
+
+- `attr_reader` - creates a method for reading an instance variable.
+- `attr_writer` - creates a method for setting an instance variable's value.
+- `attr_accessor` - creates both of the above.
+
+---
+
+# attr_accessor Example
+
+{% eval ruby %}
+class Person
+  attr_accessor :name
+
+  def greet
+    puts "Hello, I'm #{@name}!"
+  end
+end
+
+brian = Person.new
+brian.name = "Brian"
+brian.greet
+{% endeval %}
+
+---
+
+# Class Methods
+
+{% eval ruby %}
+class Person
+  def self.systematic_name
+    "Homo sapiens"
+  end
+end
+puts Person.systematic_name
+{% endeval %}
+
+---
+
+# Extending Classes
+
+To extend a class use the `<` followed by the name you want to extend.
+    
+{% eval ruby %}
+class Person
+
+end
+
+class Employee < Person
+  def hours
+    puts "My hours are 9 to 5"
+  end
+end
+brian = Person.new
+marvin = Employee.new
+puts marvin.respond_to?("hours")
+puts brian.respond_to?("hours")
+{% endeval %}
+
+---
+
+class: middle,center
+
+# Where Can I Learn More?
+
+---
+
+# Ruby Documentation
+
+- http://www.ruby-lang.org/
+- http://www.ruby-doc.org/
+- http://www.rubydoc.info/
+- http://apidock.com/
+
+---
+
+# Instructional Sites
+
+## Free
+
+- [Try Ruby](http://tryruby.org/)
+- [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org/)
+
+## Not Free (but worth the money)
+
+- [Code School - Ruby Bits](http://www.codeschool.com/courses/ruby-bits)
+- [Code School - Ruby Bits 2](http://www.codeschool.com/courses/ruby-bits-part-2)
+
+---
+
+# Books
+
+- [Programming Ruby 1.9](http://pragprog.com/book/ruby3/programming-ruby-1-9)
+- [The Well-Grounded Rubyist](http://www.manning.com/black2/)
+- [Eloquent Ruby](http://eloquentruby.com/)
+
+---
+
+class: middle,center
+
+# Questions?
+

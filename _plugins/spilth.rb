@@ -1,4 +1,5 @@
 require "jekyll-minimagick"
+require "liquid-eval"
 
 module Liquid
   class VimeoTag < Liquid::Tag
@@ -33,7 +34,7 @@ module Liquid
       %Q{<a href="/images/original/#{@image}"><img class="thumbnail" src="/images/small/#{@image}" width="320" height="240" /></a>}
     end
   end
-  
+
   class SoundCloudTag < Liquid::Tag
     def initialize(name, id, tokens)
       super
@@ -45,12 +46,26 @@ module Liquid
     end
   end
 
-  class SidebarBlock < Liquid::Block
+  class RubyBlock < Liquid::Block
+    def initialize(name, markup, tokens)
+      super
+      @code = @nodelist[0].to_s.gsub(/^$\n/, '')
 
+      File.open('/tmp/ruby-foo.rb', 'w') {|f| f.write("#{@code}")}
+      @result = `ruby /tmp/ruby-foo.rb`
+    end
+
+    def render(context)
+      %Q[<h6>Code:</h6><pre><code>#{@code}</code></pre><h6>Output:</h6><pre class="output"><code>#{@result}</code></pre>]
+    end
+
+  end
+
+  class SidebarBlock < Liquid::Block
     alias :super_render :render
 
     def initialize(tag_name, identifier, tokens)
-       super
+      super
     end
 
     def render(context)
@@ -60,9 +75,12 @@ module Liquid
   end
 end
 
+Liquid::Template.register_tag('ruby', Liquid::RubyBlock)
 Liquid::Template.register_tag('sidebar', Liquid::SidebarBlock)
 Liquid::Template.register_tag('image', Liquid::ImageTag)
 Liquid::Template.register_tag('vimeo', Liquid::VimeoTag)
 Liquid::Template.register_tag('youtube', Liquid::YouTubeTag)
 Liquid::Template.register_tag('soundcloud', Liquid::SoundCloudTag)
+
+LiquidEval.register_language('io', 'io', 'io')
 

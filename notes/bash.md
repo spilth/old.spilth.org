@@ -1,7 +1,9 @@
 ---
-title: Bourne-Again SHell (BASH)
+title: Bash (Bourne-Again SHell)
 layout: note
 ---
+
+> Bash is the shell, or command language interpreter, for the GNU operating system.
 
 ## Set vi Mode in Bash
 

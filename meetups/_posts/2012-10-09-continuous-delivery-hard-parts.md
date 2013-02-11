@@ -3,7 +3,7 @@ title: Continuous Delivery - The Hard Parts
 layout: meetup
 meetup_url: http://www.meetup.com/ContinuousDeliveryNYC/events/73148732/
 slides_url: http://www.slideshare.net/TimothyFitz/the-hard-problems-of-continuous-deployment
-
+published: false
 ---
 
 Presenter: [Timothy Fitz](http://timothyfitz.com)
