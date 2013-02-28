@@ -1,0 +1,507 @@
+---
+title: Ruby Crash Course - Part 2
+layout: remark
+---
+
+class: middle,center
+
+# Ruby Crash Course - Part 2
+
+---
+
+# Disclaimer
+
+## This is a whirlwind tour
+
+- It shows you the basics of Ruby
+- It is not a complete overview of the language but a quick exposure to how to do common things.
+- It assumes you are familiar with basic programming concepts:
+  - variables
+  - conditionals
+  - loops
+  - methods
+- It assumes you are familiar with the basics of object oriented programming:
+  - classes
+  - objects
+  - inheritance
+- It assumes you'll use the resources provided at the end to further your learning & practice.
+- It assumes you've gone through [Ruby Crash Course - Part 1](/presentations/ruby-crash-course)
+
+---
+
+# Naming Syntax & Conventions
+
+- Local Variables: `dashed_lowercase`
+- Class Names: `CamelCase`
+- Method Names: `dashed_lowercase`
+- Instance Variables: `@dashed_lowercase`
+- Globals: `$DASHED_UPPERCASE`
+- Constants: `DASHED_UPPERCASE`
+
+---
+
+class: center, middle
+
+# Modules
+
+---
+
+# What are Modules?
+
+> A Module is a collection of methods and constants
+
+- Modules act as Namespaces
+- Modules let you "mix in" functionality into Classses
+- Modules can contain:
+  - methods
+  - classes
+  - other modules
+- Hint: Classes are actually global Constants...
+
+---
+
+# Modules as Namespaces
+
+You should use Modules as Namespaces to keep your Classes from clashing with existing ones.
+
+{% eval ruby %}
+module Hello
+  class Foo
+    def greet
+      puts "Yo!"
+    end
+  end
+end
+foo = Hello::Foo.new
+foo.greet
+{% endeval %}
+
+---
+
+# Modules as Mixins
+
+You can create a module with methods and then "mix" its methods into classes using `include`:
+
+{% eval ruby %}
+module Greetings
+  def greet
+    puts "Hello!"
+  end
+end
+
+class Person
+  include Greetings
+end
+brian = Person.new
+brian.greet
+{% endeval %}
+
+---
+
+# Module Methods
+
+Modules can also have their own equivalent of Class Methods:
+
+{% eval ruby %}
+module Hello
+  def self.hello
+    puts "Hello!"
+  end
+end
+Hello::hello
+{% endeval %}
+
+---
+
+class: center, middle
+
+# Intermediate Ruby
+
+---
+
+# Everything in Ruby is an Object
+
+- Ruby is a hardcore Object Oriented Language.
+- Everything is an object.
+- Everything has an `object_id`.
+
+{% eval ruby %}
+puts "Foo".object_id
+puts ["foo", "bar"].object_id
+puts 1.object_id
+puts "Foo".object_id.object_id
+{% endeval %}
+
+---
+
+# Every Object has a Class
+
+You can get an object's Class using the `class` method.
+
+{% eval ruby %}
+puts "Foo".class
+puts 1.class
+puts ["foo", "bar"].class
+puts "Foo".object_id.class
+puts Array.class
+puts Array.class.object_id
+puts Class.class
+{% endeval %}
+
+---
+
+# Reflection
+
+Ruby provides a number of methods that let you inspect objects and classes. They are provided by the [Module Class](http://ruby-doc.org/core-1.9.3/Module.html).
+
+Here are a few examples:
+
+{% eval ruby %}
+message = "Hello, world!"
+puts "The class of message is: #{message.class}"
+puts "The super class of String is: #{message.class.superclass}"
+puts "It has #{message.public_methods.length} public methods"
+puts "String's ancestors are: #{String.ancestors}"
+puts "String includes the following modules: #{String.included_modules}"
+{% endeval %}
+---
+
+# nil
+
+- If an instance variable is undefined its value is `nil`.
+- You can test for `nil` using the `nil?` method.
+
+{% eval ruby %}
+puts @answer
+puts @answer.nil?
+@answer = 42
+puts @answer.nil?
+puts nil.class
+{% endeval %}
+
+---
+
+# Truthiness
+
+Understanding what evaluates to true in a language is important.
+
+{% eval ruby %}
+puts "true is true" if true
+puts "1 is true" if 1
+puts "Strings are true" if "foo"
+puts "Even the string 'false' is true" if "false"
+puts "And the number 0 is also true" if 0
+puts true.class
+{% endeval %}
+
+---
+
+# Falsities
+
+As is what evaluates to false.
+
+{% eval ruby %}
+puts "false is false" unless false
+puts "nil is false" unless nil
+puts "The number 0 still isn't false" unless 0
+puts false.class
+{% endeval %}
+
+---
+
+# True and False
+
+To recap:
+
+- false is false
+- nil is false
+- Everything else is true
+- .warning[0 is true]
+- .warning["" is true]
+
+---
+
+class: center, middle
+
+# Ruby Libraries
+
+---
+
+# Core API
+
+Ruby has Core API, documented at http://ruby-doc.org/core-1.9.3/
+
+Everything in the Core API is automatically available for you to use in your Ruby code.
+
+---
+
+# Standard Library
+
+Ruby also comes with a Standard Library: http://ruby-doc.org/stdlib-1.9.3/
+
+To make use of a Class in the Standard Library you must first `require` it.
+
+---
+
+# require
+
+Here's an example using [URI Module](http://ruby-doc.org/stdlib-1.9.3/libdoc/uri/rdoc/URI.html) from the Standard Library
+
+{% eval ruby %}
+require 'uri'
+uri = URI("http://spilth.org/")
+puts uri.scheme
+puts uri.host
+puts uri.path
+{% endeval %}
+
+---
+
+# Ruby Load Path
+
+When you use `require`, Ruby searches its Load Path to find the Ruby script you've referenced. The Load Path is an array that's available using the global `$LOAD_PATH`
+
+{% eval ruby %}
+puts $LOAD_PATH
+{% endeval %}
+
+---
+
+class: middle,center
+
+# Gems
+
+---
+
+# What are Gems?
+
+- Gems are packaged Ruby programs and libraries.
+- They are created and published by Ruby developers but are not part of the Core or Standard Libraries.
+
+---
+
+# What is RubyGems?
+
+- RubyGems is a package manager that provides tools and servers for distributing and installing Gems.
+- https://rubygems.org/
+
+---
+
+# Installing RubyGems
+
+The BitNami Ruby Stack and RVM both install RubyGems for you.
+
+You can manually install by doing the following:
+
+1. Download RubyGems from https://rubygems.org/pages/download
+1. Unpack the download file
+1. Change into the unpacked directory
+1. Ruby `ruby setup.rb`
+
+---
+
+# Finding Gems
+
+- A great place to look for Ruby Gems is at https://www.ruby-toolbox.com/
+- Googling for something like `ruby markdown gem` works well too.
+- Use the `gem search` command with the `--remote` flag to look for gems by name.
+
+Here's an example search for an FTP gem:
+
+    $ gem search --remote ftp
+
+    *** REMOTE GEMS ***
+
+    aqueduct-ftp (0.1.0)
+    carrierwave-ftp (0.2.1)
+    czj-paperclipftp (0.1.2)
+    ...
+
+---
+
+# Installing Gems
+
+Once you've found a Gem you want to use you will want to install it.
+
+Installing is done using the `gem install` command:
+
+    $ gem install ubyray
+    Successfully installed ubyray-0.0.3
+    1 gem installed
+    Installing ri documentation for ubyray-0.0.3...
+    Building YARD (yri) index for ubyray-0.0.3...
+    Installing RDoc documentation for ubyray-0.0.3...
+    $
+
+---
+
+# Using Gems
+
+Using a Gem generally involves you first `require` the gem, then use the classes or methods it provides.
+
+{% eval ruby %}
+require 'ubyray'
+word = "Java"
+translation = Ubyray.translate(word)
+puts "The word '#{word}' is '#{translation}' in Pig Latin."
+{% endeval %}
+
+---
+
+class: center, middle
+
+# Bundler
+
+---
+
+# What is Bundler?
+
+> Bundler maintains a consistent environment for ruby applications. It tracks an application's code and the rubygems it needs to run, so that an application will always have the exact gems (and versions) that it needs to run.
+
+---
+
+# Why should I use Bundler?
+
+Bundler allows you to define which Gems your projects use (as well as which specific versions of those Gems) in your project so that others may contribute to and use your Gem with the same exact dependencies.
+
+Also, Rails uses Bundler.
+
+---
+
+# Installing Bundler
+
+BitNami Ruby Stack and RVM both install Bundler for you.
+
+## Manual Install
+
+Bundler itself is a Gem, so you can install it using the `gem install` command:
+
+    $ gem install bundler
+    Fetching: bundler-1.2.3.gem (100%)
+    Successfully installed bundler-1.2.3
+    1 gem installed
+    Installing ri documentation for bundler-1.2.3...
+    Building YARD (yri) index for bundler-1.2.3...
+    Installing RDoc documentation for bundler-1.2.3...
+    $
+
+---
+
+# How Bundler Works
+
+1. You create a file named `Gemfile` that lists the Gems you use.
+1. You run the `bundle` command.
+1. Bundler downloads the gems you specified.
+1. Bundler creates a file named `Gemfile.lock` that lists the Gems and dependenies it downloaded and the version of each.
+1. You check both `Gemfile` and `Gemfile.lock` into version control.
+1. Somebody else checks our your project.
+1. They run the `bundle` command.
+1. Bundler uses the `Gemfile` and `Gemfile.lock` to download the same exact Gem versions that your project requires.
+
+---
+
+# Define a Project's Gems
+
+To define the Gems used by your project, create a file named `Gemfile` at the root of your project's directory structure and list the Gems you require.
+
+The first line defines which Gem servers you want to downlod from. `:rubygems` represents https://rubygems.org/. You can also add you own private Gem repositories.
+
+    source :rubygems
+
+    gem 'ubyray'
+
+---
+    
+# Install a Project's Gems
+
+To install the Gems for a project run the `bundle` command:
+
+    $ bundle
+    Fetching gem metadata from http://rubygems.org/..
+    Installing ubyray (0.0.3) 
+    Using bundler (1.2.1) 
+    Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+This will generate a `Gemfile.lock` file that lists the specific versions you've installed. This file should be checked into version control as well. This will ensure that others also install the same versions when they check out your project.
+
+---
+
+# Gemfile.lock
+
+Here's an example of a Gemfile.lock file:
+
+    GEM
+      remote: http://rubygems.org/
+      specs:
+        ubyray (0.0.3)
+
+    PLATFORMS
+      ruby
+
+    DEPENDENCIES
+      ubyray
+
+---
+
+# Specifying Gem Versions
+
+You can also specific specific versions and version ranges of Gems in a variety of ways.
+
+[RubyGems Manual - Specifying Versions](http://docs.rubygems.org/read/chapter/16) provides complete information on this.
+
+    gem "nokogiri"
+    gem "rails", "3.0.0.beta3"
+    gem "rack",  ">=1.0"
+    gem "thin",  "~>1.1"
+
+---
+
+class: middle,center
+
+# Where Can I Learn More?
+
+---
+
+# Ruby Language & Tools
+
+- http://www.ruby-lang.org/
+- http://rubygems.org/
+- http://gembundler.com/
+- https://rvm.io/
+- https://www.ruby-toolbox.com/
+
+# Ruby Documentation
+
+- http://www.ruby-doc.org/
+- http://www.rubydoc.info/
+- http://apidock.com/
+
+---
+
+# Instructional Sites
+
+## Free
+
+- [Try Ruby](http://tryruby.org/)
+- [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org/book/)
+
+## Not Free (but worth the money)
+
+- [Code School - Ruby Bits](http://www.codeschool.com/courses/ruby-bits)
+- [Code School - Ruby Bits 2](http://www.codeschool.com/courses/ruby-bits-part-2)
+
+---
+
+# Books
+
+- [Programming Ruby 1.9](http://pragprog.com/book/ruby3/programming-ruby-1-9)
+- [The Well-Grounded Rubyist](http://www.manning.com/black2/)
+- [Eloquent Ruby](http://eloquentruby.com/)
+- [Metaprogramming Ruby](http://pragprog.com/book/ppmetr/metaprogramming-ruby)
+
+---
+
+class: middle,center
+
+# Questions?
+
