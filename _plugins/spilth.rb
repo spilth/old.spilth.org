@@ -2,6 +2,17 @@ require "jekyll-minimagick"
 require "liquid-eval"
 
 module Liquid
+  class StarsTag < Liquid::Tag
+    def initialize(name, count, tokens)
+      super
+      @count = count.to_i
+    end
+
+    def render(content)
+      @count.times.collect {|n| '<img src="/images/star.png" width="16" height="16" />'}.join
+    end
+  end
+
   class VimeoTag < Liquid::Tag
     def initialize(name, id, tokens)
       super
@@ -81,6 +92,7 @@ Liquid::Template.register_tag('image', Liquid::ImageTag)
 Liquid::Template.register_tag('vimeo', Liquid::VimeoTag)
 Liquid::Template.register_tag('youtube', Liquid::YouTubeTag)
 Liquid::Template.register_tag('soundcloud', Liquid::SoundCloudTag)
+Liquid::Template.register_tag('stars', Liquid::StarsTag)
 
 LiquidEval.register_language('io', 'io', 'io')
 
