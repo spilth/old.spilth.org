@@ -11,11 +11,11 @@ Links to and reviews of each may eventually make their way onto this page.
 
 These are the books I'm currently focused on:
 
-- Seven Languages in Seven Weeks
+- Service-Oriented Design with Ruby and Rails
 
 ## On Deck
 
-Books I've purchsed and am interested in reading next:
+Books I've purchased and am interested in reading next:
 
 - The Healthy Programmer
 
@@ -43,7 +43,7 @@ Books I've finished or read the majority of:
 - Agile Web Development with Rails
 - Ant in Action
 - Pragmatic Project Automation
-- Pragmatic Verison Control using Subversion
+- Pragmatic Version Control using Subversion
 - Pragmatic Unit Testing in Java with JUnit
 - Thoughtworks Anthology
 - Refactoring: Improving the Design of Existing Code {% stars 5 %}
@@ -54,7 +54,8 @@ Books I've finished or read the majority of:
 
 These are books I've started or read a fair amount of but haven't finished yet:
 
-- The Cucmber Book
+- Seven Languages in Seven Weeks
+- The Cucumber Book
 - Rails 3 Recipes
 - Practical Object-Oriented Design in Ruby
 - Build Awesome Command-line Applications in Ruby
@@ -80,7 +81,6 @@ Books I've bought but haven't started yet or have ready very little of:
 - The Developer's Code
 - Practical Vim
 - Ruby and MongoDB Web Development
-- Service-Oriented Design with Ruby and Rails
 - Seven Databases in Seven Weeks
 - Continuous Delivery and DevOps: A Quickstart Guide
 - Apache Solr 3
