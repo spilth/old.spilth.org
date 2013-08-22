@@ -7,3 +7,5 @@ gem 'rdiscount'
 gem 'kramdown'
 gem "liquid-eval", "~> 0.0.1"
 
+gem 'ubyray'
+
