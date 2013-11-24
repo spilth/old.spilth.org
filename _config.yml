@@ -2,7 +2,6 @@ name: spilth.org
 description: Personal site of Brian Kelly
 url: http://spilth.org/
 server_port: 4200
-auto: true
 markdown: kramdown
 kramdown:
     toc_levels: 1..2
