@@ -1,11 +1,11 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'jekyll-minimagick'
-gem 'jekyll-s3', '2.0.0'
+gem 's3_website'
 gem 'rdiscount'
 gem 'kramdown'
-gem "liquid-eval", "~> 0.0.1"
 
+gem "liquid-eval"
 gem 'ubyray'
 
