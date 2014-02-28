@@ -3,6 +3,12 @@ title: The Laundry Room
 layout: project
 ---
 
+## Update - February 2014
+
+We're getting the band back together. At least to jam a bit and try to write some songs together.
+
+We got [The Laundry Room web site](http://thelaundryroom.com) up and running again.
+
 ## History
 
 The Laundry Room was the band I played in while attending [Manhattanville College](http://www.mville.edu/). I sang and played guitar. We put out a few tapes (cassette tapes, yes!) of songs by ourselves, followed by a 5 song CD and then eventually signed to a small label and record a 10 song CD.
