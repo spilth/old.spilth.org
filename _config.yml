@@ -6,7 +6,7 @@ markdown: kramdown
 kramdown:
     toc_levels: 1..2
 permalink: pretty
-exclude: [Rakefile, Gemfile, Gemfile.lock]
+exclude: [Rakefile, Gemfile, Gemfile.lock, README.md]
 pygments: true
 mini_magick:
     thumbnail:
