@@ -24,8 +24,7 @@ I still write songs here and there, either with my guitar or my keyboard and Abl
 
 ## Profiles
 
-- [BandMix](http://www.bandmix.com/polymonic/)
-- [ReverbNation](http://www.reverbnation.com/polymonic)
+- [ReverbNation](http://www.reverbnation.com/musician/spilth)
 - [SoundCloud](http://soundcloud.com/spilth/)
 - [Vimeo](https://vimeo.com/album/2059904)
 
