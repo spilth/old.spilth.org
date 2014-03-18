@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '~> 1.4.3'
 gem 'jekyll-minimagick'
 gem 's3_website'
 gem 'rdiscount'
