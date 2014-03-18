@@ -1,7 +1,15 @@
 ---
 title: JavaScript Set
 layout: project
+type: Browser Game
+summary: The game Set in your browser
+permalink: projects/javascript-set
+banner: banner-javascript-set.png
 ---
+
+## Screenshot
+
+{% image set-javascript.png %}
 
 {% sidebar %}
 
@@ -16,13 +24,4 @@ layout: project
 - [Dojo Toolkit](http://dojotoolkit.org/)
 
 {% endsidebar %}
-
-## Summary
-
-The game of Set impemented using JavaScript and the Dojo Toolkit.
-
-## Screenshot
-
-{% image set-javascript.png %}
-
 

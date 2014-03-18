@@ -1,9 +1,13 @@
 ---
 title: Mellotroid
 layout: project
+type: Music
+summary: The music of Metroid as possibly performed by the 1970’s version of Genesis
+permalink: projects/mellotroid
+banner: banner-mellotroid.jpg
 ---
 
-## Summary
+## Description
 
 The music (okay, theme song only) of the NES classic Metroid done in the style of 1970's Genesis.
 

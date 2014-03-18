@@ -1,0 +1,17 @@
+---
+title: Personal website of Brian Kelly
+layout: default
+projectstab: active
+---
+<h2>Projects</h2>
+
+<p> Over time I've started a lot of personal projects. Some of them I've even finished!</p>
+
+{% for project in site.categories.projects reversed %}
+  <h2><a href="{{project.url}}">{{ project.title }}</a> - {{ project.type }}</h2>
+  <p>{{ project.summary }}</p>
+  {% if project.banner %}
+  <img width="780" height="140" src="/images/{{ project.banner }}" class="thumbnail" />
+  {% endif %}
+{% endfor %}
+

@@ -1,6 +1,10 @@
 ---
 title: The Laundry Room
 layout: project
+type: Band
+summary: Rock band I was in during my college days. And a bit after.
+permalink: projects/the-laundry-room
+banner: banner-laundry-room.jpg
 ---
 
 ## Update - February 2014

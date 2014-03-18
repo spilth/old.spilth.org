@@ -1,11 +1,11 @@
 ---
 title: The Arcanaeum
 layout: project
+type: Web Site
+summary: All the books of Skyrim in a clean, clear, tablet and mobile friendly display
+permalink: projects/the-arcanaeum
+banner: banner-the-arcanaeum.jpg
 ---
-
-## Summary
-
-The books of Skyrim presented in a clean, simple, readable format for easy reading on mobile devices when away from the game itself.
 
 ## Screenshots
 
