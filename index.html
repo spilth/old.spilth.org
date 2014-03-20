@@ -2,76 +2,67 @@
 title: Personal website of Brian Kelly
 layout: default
 ---
-<div class="row">
-  <div class="span12">
-    <h1>Personal website of Brian Kelly</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="span8">
-    <p>My name is Brian Kelly. I am a software developer by day and a geek most of the rest of the time. I live in Brooklyn, NY with my girlfriend and our 4 pet mountain bikes.</p>
+<h1>Personal website of Brian Kelly</h1>
 
-    <p>Here's what you can find on my site:</p>
+<p><img src="/images/me.png" width="150" height="145" alt="Picture of me" align="right">
+My name is Brian Kelly. I am a software developer by day and a geek most of the rest of the time. I live in Brooklyn, NY with my girlfriend and our 4 pet mountain bikes.</p>
 
-    <h2><a href="/blog/">Blog</a></h2>
+<p>Here's what you can find on my site:</p>
 
-    <p>I've been blogging since the 2000, on a variety of platforms over the years. Currently I'm moving my posts to <a href="/blog/">my blog right here</a>, though there's still a good number of posts in <a href="http://spilth.wordpress.com/">my blog archive</a> over on WordPress still.</p>
+<h2><a href="/blog/">Blog</a></h2>
 
-    <h2><a href="/hobbies/">Hobbies</a></h2>
+<p>I've been blogging since the 2000, on a variety of platforms over the years. Currently I'm moving my posts to <a href="/blog/">my blog right here</a>, though there's still a good number of posts in <a href="http://spilth.wordpress.com/">my blog archive</a> over on WordPress still.</p>
 
-    <p>I like to do a few different things in my spare time. My <a href="/hobbies/">hobbies</a> mostly revolve around computers, music, games and mountain bikes.</p>
-    <h2><a href="/notes/">Notes</a></h2>
+<h3>Latest Posts</h3>
 
-    <p>One of the best ways I learn something is by taking notes on it. I put <a href="/notes/">my notes</a> online so I can refer to them easily and so that others may learn from them as well.</p>
+<ul>
+  {% for post in site.posts, limit: 2 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
-    <h2><a href="/projects/">Projects</a></h2>
+<h2><a href="/hobbies/">Hobbies</a></h2>
 
-    <p>Sometimes my hobbies give birth to <a href="/projects/">personal projects</a>. Web sites, maps, songs, games - those kind of things.</p>
+<p>I like to do a few different things in my spare time. My <a href="/hobbies/">hobbies</a> mostly revolve around computers, music, games and mountain bikes.</p>
+<h2><a href="/notes/">Notes</a></h2>
 
-    <h2><a href="/colophon/">Colophon</a></h2>
+<p>One of the best ways I learn something is by taking notes on it. I put <a href="/notes/">my notes</a> online so I can refer to them easily and so that others may learn from them as well.</p>
 
-    <p>I love when books, movies, albums and web sites have a section telling you about what they used to create it, so I thought others might be interested in <a href="/colophon/">what I use to make this site</a>.
+<h2><a href="/projects/">Projects</a></h2>
 
-    <h2>Other Stuff</h2>
+<p>Sometimes my hobbies give birth to <a href="/projects/">personal projects</a>. Web sites, maps, songs, games - those kind of things.</p>
 
-    <p>Here's some stuff I host externally:</p>
+<h2><a href="/colophon/">Colophon</a></h2>
 
-    <h3><a href="http://resume.spilth.org/">My Resume</a></h3>
+<p>I love when books, movies, albums and web sites have a section telling you about what they used to create it, so I thought others might be interested in <a href="/colophon/">what I use to make this site</a>.
 
-    <p>Maintaining a resume on multiple sites in multiple formats is tedious. I wrote a little script that turns my resume in Markdown format into a web site and a PDF.</p>
+<h2>Other Stuff</h2>
 
-    <h3><a href="http://blog.spilth.org/">Tumblr Blog</a></h3>
+<p>Here's some stuff I host externally:</p>
 
-    <p>I'm sharing some lighter/fun stuff on <a href="http://blog.spilth.org/">my Tumblr blog</a>.</p>
+<h3><a href="http://resume.spilth.org/">My Resume</a></h3>
 
-    <p>I also have a slightly silly number of Tumblrs I use for various things like <a href="http://ideas.spilth.org/">tracking ideas I have</a>, <a href="http://isometric.spilth.org/">collecting inspiration isometric art</a>, <a href="http://minecrafting.spilth.org/">chronicling my on again/off again Minecraft playing</a>, <a href="http://collaborations.spilth.org/">maintaining a list of fantasy musical collaborations</a> and <a href="http://technology-wishes.spilth.org/">keeping a wishlist of hardware/software features</a>.
-  </div>
-  <div class="span4">
-    <div class="well">
-      <img src="/images/me.png" width="150" height="145" class="img-rounded" alt="Picture of me">
+<p>Maintaining a resume on multiple sites in multiple formats is tedious. I wrote a little script that turns my resume in Markdown format into a web site and a PDF.</p>
 
-      <h2>Newest Posts</h2>
+<h3><a href="http://blog.spilth.org/">Tumblr Blog</a></h3>
 
-      <ul>
-        {% for post in site.posts, limit: 2 %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
+<p>I'm sharing some lighter/fun stuff on <a href="http://blog.spilth.org/">my Tumblr blog</a>.</p>
 
-      <h2>Profiles</h2>
-      <p>Where to find me around the interweb...</p>
-      <ul>
-        <li><a href="https://www.facebook.com/spilth">Facebook</a></li>
-        <li><a href="http://www.flickr.com/photos/spilth/">Flickr</a></li>
-        <li><a href="https://github.com/spilth">GitHub</a></li>
-        <li><a href="https://plus.google.com/112383017680227997640/posts">Google Plus</a></li>
-        <li><a href="http://www.last.fm/user/spilth">last.fm</a></li>
-        <li><a href="http://soundcloud.com/spilth">SoundCloud</a></li>
-        <li><a href="http://steamcommunity.com/id/spilth/">Steam</a></li>
-        <li><a href="https://twitter.com/#!/spilth">Twitter</a></li>
-        <li><a href="https://vimeo.com/spilth">Vimeo</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<p>I also have a slightly silly number of Tumblrs I use for various things like <a href="http://ideas.spilth.org/">tracking ideas I have</a>, <a href="http://isometric.spilth.org/">collecting inspiration isometric art</a>, <a href="http://minecrafting.spilth.org/">chronicling my on again/off again Minecraft playing</a>, <a href="http://collaborations.spilth.org/">maintaining a list of fantasy musical collaborations</a> and <a href="http://technology-wishes.spilth.org/">keeping a wishlist of hardware/software features</a>.
+
+<h3>Profiles</h3>
+
+<p>Where to find me around the interweb...</p>
+
+<ul>
+  <li><a href="https://www.facebook.com/spilth">Facebook</a></li>
+  <li><a href="http://www.flickr.com/photos/spilth/">Flickr</a></li>
+  <li><a href="https://github.com/spilth">GitHub</a></li>
+  <li><a href="https://plus.google.com/112383017680227997640/posts">Google Plus</a></li>
+  <li><a href="http://www.last.fm/user/spilth">last.fm</a></li>
+  <li><a href="http://soundcloud.com/spilth">SoundCloud</a></li>
+  <li><a href="http://steamcommunity.com/id/spilth/">Steam</a></li>
+  <li><a href="https://twitter.com/#!/spilth">Twitter</a></li>
+  <li><a href="https://vimeo.com/spilth">Vimeo</a></li>
+</ul>
 

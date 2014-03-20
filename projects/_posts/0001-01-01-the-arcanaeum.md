@@ -9,10 +9,7 @@ banner: banner-the-arcanaeum.jpg
 
 ## Screenshots
 
-<ul class="thumbnails">
-<li>{% image arcanaeum01.png %}</li>
-<li>{% image arcanaeum02.png %}</li>
-</ul>
+{% image arcanaeum01.png %} {% image arcanaeum02.png %}
 
 ## History
 
