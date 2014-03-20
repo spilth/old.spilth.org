@@ -1,7 +1,6 @@
 ---
 title: Colophon
 layout: index
-colophontab: active
 ---
 
 > Colophon: an inscription placed at the end of a book or manuscript usually with facts relative to its production

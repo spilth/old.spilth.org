@@ -1,7 +1,6 @@
 ---
 title: Hobbies
 layout: index
-hobbiestab: active
 ---
 
 I've had a number of hobbies over the years. These are my more prominent/recent ones:
