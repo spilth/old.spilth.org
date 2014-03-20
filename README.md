@@ -4,3 +4,11 @@
 
 This is my personal web site.
 
+## Setup
+
+    $ brew install imagemagick # Required by minimagick gem
+    $ git clone git@github.com:spilth/spilth.org.git
+    $ cd spilth.org
+    $ bundle
+    $ jekyll server -w
+
