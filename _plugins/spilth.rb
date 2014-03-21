@@ -42,7 +42,7 @@ module Liquid
     end
 
     def render(context)
-      %Q{<a href="/images/original/#{@image}"><img class="thumbnail" src="/images/small/#{@image}" width="320" height="240" /></a>}
+      %Q{<a href="/images/original/#{@image}"><img class="thumbnail" src="/images/small/#{@image}" width="320" /></a>}
     end
   end
 
