@@ -2,20 +2,21 @@
 layout: default
 ---
 
-<div class="content">
-  <h1><a href="/blog/">Blog</a> : {{ page.title }}</h1>
-  <h5>{{ page.date | date: "%A, %B %d" }}</h5>
+<h1><a href="/blog/">Blog</a> : {{ page.title }}</h1>
+<h5>{{ page.date | date: "%A, %B %d" }}</h5>
 
-  <div class="row">
-   	<div class="span12">
-	  	{{ content }}
-		</div>
-	</div>
+{{ content }}
 
-  <div class="row">
-  	<div class="span12">
-			{% include disqus.html %}        
-		</div>
-  </div>
-</div>
+{% include disqus.html %}
+
+<h2>More Posts</h2>
+
+<ul>
+{% if page.next %}
+<li>Next Post: <a href="{{ page.next.url}}">{{ page.next.title}}</a></li>
+{% endif %}
+{% if page.previous %}
+<li>Previous Post: <a href="{{ page.previous.url}}">{{ page.previous.title}}</a></li>
+{% endif %}
+</ul>
 
