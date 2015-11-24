@@ -3,7 +3,9 @@ title: Wishlist
 layout: index
 ---
 
-- [Amazon](http://amzn.com/w/2HLJCZBKM412G)
-- [Pragmatic Bookshelf](http://pragprog.com/wishlist/brian-kelly-6643-112576fee5)
-- [Steam](http://steamcommunity.com/id/spilth/wishlist)
+- [Apartment](http://amzn.com/w/1M5EAE26LLQOE)
+- [Game Development](http://amzn.com/w/37YYW80WKKCIG)
+- [Music](http://amzn.com/w/39015FB2C9LIY)
+- [Photography](http://amzn.com/w/390504C9208DT)
+- [Reading](http://amzn.com/w/2HLJCZBKM412G)
 
